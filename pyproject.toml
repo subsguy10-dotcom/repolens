@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "repolens-local"
+version = "0.1.0"
+description = "Local-first GitHub repository health and secret-pattern scanner"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "RepoLens contributors"}]
+[project.scripts]
+repolens = "repolens.cli:main"
+repolens-web = "repolens.web:main"
+[tool.setuptools.packages.find]
+include = ["repolens*"]
